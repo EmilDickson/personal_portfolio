@@ -1,0 +1,274 @@
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat'); */
+
+body {
+    display: flex;
+    /* background-image: linear-gradient(hsla(78, 8%, 70%, 1), hsla(84, 14%, 93%, 1)); color1, color5 */
+    background-color: hsla(37, 17%, 75%, 1);
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+
+a {
+    color: #EEF0EB; /* color5 */
+    text-decoration: none;
+}
+
+#main-frame {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    text-align: center;
+    font-family: Avenir, sans-serif;
+    max-width: 1280px;
+}
+
+#about {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.aboutElement {
+    max-width: 450px;
+    /* background-image: linear-gradient(hsla(78, 8%, 70%, 1), hsla(68, 8%, 70%, 1)); */ /* color3, color3(l -3%) */
+    /* background-color: hsla(78, 8%, 70%, .3); */
+    background-image: linear-gradient(hsla(37, 17%, 75%, 0.3), hsla(33, 48%, 86%, 0.3));
+    /* border-radius: 4px; */
+    padding: 2em;
+    box-shadow: 0px 1px 2px hsla(84, 14%, 93%, .2); /* color2 */
+}
+
+#presentation {
+    text-align: left;
+}
+
+#presentation p {
+    margin-top: 72px;
+}
+
+#contact h2 {
+    text-align: left;
+}
+
+#contactInfo {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: left;
+}
+
+#contactInfo ul {
+    margin-top: 50px;
+    list-style-type: none;
+}
+
+#contactInfo li {
+    margin-bottom: 1em;
+}
+
+#contactInfo #socialLinks {
+    justify-content: space-between;
+}
+
+#projects {
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: space-around; */
+}
+
+.projectThumbnail {
+    text-align: center;
+    /* margin: 20px; */
+    margin: 0.2em;
+     padding: 1.45em 1.45em 0 1.45em;
+    background-image: linear-gradient(hsla(204, 42%, 27%, 1), hsla(204, 42%, 24%, 1));
+    min-height: 360px;
+    /* border-radius: 4px; */
+    font-size: 1.25em;
+    color: #EEF0EB;
+    box-shadow: 0px 2px 4px hsla(202, 52%, 17%, 1); /* color2 */
+}
+
+.projectThumbnail a {
+    text-decoration: none;
+}
+
+.projectThumbnail:hover {
+    background-image: linear-gradient(hsla(204, 42%, 27%, 1), hsla(228, 42%, 27%, 1)); /* color3, color3(h +24) */
+}
+
+/* Presentation-pages-specific stuff here */
+
+#presTop {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 0.5em;
+}
+
+#presTop a {
+    text-decoration: none;
+    color: hsla(204, 42%, 27%, 1); /* color3 */
+    align-self: center;
+}
+
+#presTop a:hover {
+    color: hsla(174, 42%, 27%, 1); /* color3(h -30) */
+}
+
+#projTitle {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#projTitle img {
+    align-self: center;
+    width: 4em;
+    height: 4em;
+    padding-right: 1em;
+}
+
+#presMain {
+    max-width: 900px;
+    text-align: left;
+}
+
+#presMain a {
+    color: black;
+}
+
+#presMain a:hover {
+    color: grey;
+}
+
+#presMain h1,h3 {
+    text-align: center;
+}
+
+#presPictures {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#presPictures img {
+    margin: 1em;
+}
+
+#giphyContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 1em;
+}
+
+
+#presVideo {
+    display: flex;
+    justify-content: center;
+    margin: 3em;
+}
+
+#presVimeo {
+    margin: 3em;
+}
+
+#presGif {
+        width: 100%;
+        height: 0;
+        padding-bottom: 52%;
+        position: relative;
+        margin: 0.5em;
+    }
+
+#presContact {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+#presContact a {
+    color: black;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+#socialLinks {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 400px;
+}
+
+.socialBtn:hover {
+    border-radius: 10px;
+    background-color: hsla(202, 52%, 17%, 0.05); /* color2 (a = 0.05) */
+}
+
+.technologiesUsed {
+    display: flex;
+    align-self: middle;
+    justify-content: space-around;
+}
+
+.technologyIcon {
+    height: 24px;
+    padding-left: 15px;
+    border-left: solid 2px hsla(202, 52%, 17%, 0.7);
+    color: hsla(202, 52%, 17%, 0.9);
+    font-weight: bold;
+}
+
+#collaborators {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Media queries for responsive design below */
+
+@media screen and (max-width: 550px) {
+    #about {
+        flex-flow: column wrap;
+    }
+
+    .aboutElement {
+        margin-bottom: 20px;
+    }
+
+    #projects {
+        flex-flow: column wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #presTop h1 {
+        font-size: 1.6em;
+    }
+
+    #presMain h1 {
+        font-size: 1.8em;
+    }
+
+    #giphyContainer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        margin: 1em;
+    }
+
+    #presVideo iframe {
+        width: 100%;
+        height: 100%;
+    }
+}

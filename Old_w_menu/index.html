@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Emil Dickson - Portfolio</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+    <body>
+
+        <div id="main-frame">
+            <div id="main-menu">
+                <!-- Main menu (header is name, items built using a table) -->
+                <h2>{{ message }}</h2>
+                <div id="project-list">
+                    <menu-item
+                        v-for="item in menuItems"
+                        :menu="item"
+                        :key="item.id">
+                    </menu-item>
+                </div>
+                <div id="menu-bottom">
+                    <a href="https://www.linkedin.com/in/emil-dickson-2813b668" target="_blank"><img src="li_icon.png" alt="LinkedIn"/></a>
+                </div>
+            </div>
+            <div id="main-window">
+                <!-- Main window for displaying content (Create all components, click makes them take upp entire div) -->
+                <project-thumbnail
+                    v-for="pimage in projects"
+                    :pimage="pimage"
+                    :key="pimage.id">
+                </project-thumbnail>
+            </div>
+        </div>
+
+        <!-- Vue stuff starts here -->
+        <script>
+            // Template for menu items
+            Vue.component('menu-item', {
+                props: ['menu'],
+                template: '<div class="menuItem"><p class="menuItemName">{{ menu.text }}<p><p class="menuItemDescription">{{ menu.desc }}</p></div>'
+            })
+            // Main menu, list of projects.
+            var mainMenu = new Vue({
+                el: '#main-menu',
+                data: {
+                    message: 'Emil Dickson',
+                    menuItems: [
+                        { id: 0, text: 'Weather Jukebox', desc: 'Description' },
+                        { id: 1, text: 'Coffee Run', desc: 'Description' },
+                        { id: 2, text: 'KubbAR', desc: 'Description' },
+                        { id: 3, text: 'PodTalk', desc: 'Description' },
+                        { id: 4, text: 'Salary Calculator', desc: 'Description' },
+                        { id: 5, text: 'Simply Connect', desc: 'Description' },
+                        { id: 6, text: 'Snake City Rockers', desc: 'Description' },
+                        { id: 7, text: 'Under Isen', desc: 'Description' }
+                    ]
+                }
+            })// Template for project thumbnails
+            Vue.component('project-thumbnail', {
+                props: ['pimage'],
+                template: '<div class="projectThumbnail"><img :src="pimage.thumbnail" :alt="pimage.name"/><p>{{ pimage.name }}</p></div>'
+            })
+            // Template for main window components
+            Vue.component('project-page', {
+                props: ['project'],
+                template: '<div class="projectPage" id="{{ project.id }}"><h2>{{ project.name }}</h2>{{ project.images }}<p>{{ project.description }}</p></div>'
+            })
+            // Main window, populated by thumbnails
+            var mainWindow = new Vue({
+                el: '#main-window',
+                data: {
+                    projects: [
+                        { id: 0, name: 'Weather Jukebox', thumbnail: 'projects/WeatherJukebox/tn.png' },
+                        { id: 1, name: 'Coffee Run', thumbnail: 'projects/CoffeeRun/cr.png'},
+                        { id: 2, name: 'KubbAR', thumbnail: 'projects/KubbAr/kar.png' },
+                        { id: 3, name: 'PodTalk', thumbnail: 'projects/PodTalk/pd.png' },
+                        { id: 4, name: 'Salary Calculator', thumbnail: 'projects/SalaryCalculator/scal.png' },
+                        { id: 5, name: 'Simply Connect', thumbnail: 'projects/SimplyConnect/scon.png' },
+                        { id: 6, name: 'Snake City Rockers', thumbnail: 'projects/SnakeCity/scr.png' },
+                        { id: 7, name: 'Under Isen', thumbnail: 'projects/UnderIsen/ui.png' }
+                    ]
+                }
+            })
+        </script>
+        <!-- Vue stuff ends here -->
+    </body>
+</html>
