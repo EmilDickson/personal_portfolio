@@ -229,6 +229,16 @@ a {
     font-weight: bold;
 }
 
+.mediaLinks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: bolder;
+    margin: 20px 0 30px 0;
+}
+
 #collaborators {
     display: flex;
     flex-direction: column;
