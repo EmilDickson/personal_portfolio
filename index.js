@@ -17,60 +17,66 @@ var mainWindow = new Vue({
     projects: [
       {
         id: 0,
+        name: "KayakingViz",
+        thumbnail: "projects/KayakingViz/kv.png",
+        link: "projects/KayakingViz"
+      },
+      {
+        id: 1,
         name: "Weather Jukebox",
         thumbnail: "projects/WeatherJukebox/tn.png",
         link: "projects/WeatherJukebox/"
       },
       {
-        id: 1,
+        id: 2,
         name: "Coffee Run",
         thumbnail: "projects/CoffeeRun/cr.png",
         link: "projects/CoffeeRun/"
       },
       {
-        id: 2,
+        id: 3,
         name: "RiksdagsViz",
         thumbnail: "projects/RiksdagsViz/RiksdagsViz.png",
         link: "projects/RiksdagsViz/"
       },
       {
-        id: 3,
+        id: 4,
         name: "FootPrint",
         thumbnail: "projects/FootPrint/FootPrint.png",
         link: "projects/FootPrint/"
       },
       {
-        id: 4,
+        id: 5,
         name: "KubbAR",
         thumbnail: "projects/KubbAR/kar.png",
         link: "projects/KubbAR/"
       },
       {
-        id: 5,
+        id: 6,
         name: "PodTalk",
         thumbnail: "projects/PodTalk/pd.png",
         link: "projects/PodTalk/"
       },
       {
-        id: 6,
+        id: 7,
         name: "Salary Calculator",
         thumbnail: "projects/SalaryCalculator/scal.png",
         link: "projects/SalaryCalculator/"
       },
       {
-        id: 7,
+        id: 8,
         name: "Simply Connect",
         thumbnail: "projects/SimplyConnect/scon.png",
         link: "projects/SimplyConnect/"
       },
       {
-        id: 8,
+        id: 9,
         name: "Snake City Rockers",
         thumbnail: "projects/SnakeCity/scr.png",
         link: "projects/SnakeCity/"
       },
       {
-        id: 9,
+        id: 10,
         name: "Under Isen",
         thumbnail: "projects/UnderIsen/ui.png",
         link: "projects/UnderIsen/"
